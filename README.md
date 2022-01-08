@@ -1,5 +1,5 @@
 # DarkNetonOpenSUSE
-在OpenSUSE上配置nvidia-docker 并运行darknet
+在OpenSUSE上配置nvidia-docker 并运行darknet的保姆级别教程
 ### 安装NVIDIA驱动
 直接通过zypper就可以安装了
 * 先添加nvida驱动源
@@ -23,7 +23,7 @@ S | Name                | Type    | Version     | Arch   | Repository
  到英伟达官网找到可以支持的驱动 只要不是远古卡 470都可以用
  * 安装驱动
  ```
- sudo zypper in <x11-video-nvidiaG04 or x11-video-nvidiaG05>
+ sudo zypper in <x11-video-nvidiaG04 或者 x11-video-nvidiaG05>
  ```
  * 重新启动
  ### 安装docker和nvidia-docker
@@ -76,4 +76,4 @@ S | Name                | Type    | Version     | Arch   | Repository
 
  运行`sudo docker build -t <起个名字> .`
  
- 试试看`sudo docker run --gpus all  darknet darknet` 显示 `usage: darknet <function>`说明程序正常起来了，接着就是挂载volume开始训练
+ 试试看`sudo docker run --gpus all  <刚才的名字> darknet` 显示 `usage: darknet <function>`说明程序正常起来了，接着就是挂载volume开始训练
